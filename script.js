@@ -1,3 +1,16 @@
+const mysql = require('mysql2');
+const express = require('express');
+
+const app = express();
+
+// Database configuration
+const db = mysql.createConnection({
+    host: 'localhost',
+    user: 'your_username',
+    password: 'your_password',
+    database: 'mydatabase'
+});
+
 // Connect to the database
 db.connect(err => {
     if (err) {
